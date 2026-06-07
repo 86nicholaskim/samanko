@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samanko · The Red Bean Carp</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;700;900&family=DM+Mono:wght@400;500&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="bg-pattern"></div>
+
+  <main id="app">
+
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-left">
+        <span class="logo-mark">◈</span>
+        <div class="logo-text">
+          <span class="logo-title">SAMANKO</span>
+          <span class="logo-sub">the red bean carp</span>
+        </div>
+      </div>
+      <div class="header-right">
+        <span class="day-badge" id="day-badge">DAY 0</span>
+      </div>
+    </header>
+
+    <!-- Stage -->
+    <section class="stage-wrapper">
+      <div class="stage" id="stage">
+        <div class="stage-bubbles" id="stage-bubbles"></div>
+        <canvas id="fish-canvas" width="200" height="160"></canvas>
+        <div class="mood-bubble" id="mood-bubble">
+          <span id="mood-text">안녕하세요 👋</span>
+        </div>
+        <div class="sleep-veil" id="sleep-veil">
+          <span class="sleep-zzz">z z z</span>
+        </div>
+        <div class="particles" id="particles"></div>
+      </div>
+      <div class="phase-tag" id="phase-tag">아기 붕어</div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats-panel">
+      <div class="stat-item">
+        <div class="stat-header">
+          <span class="stat-icon">🍡</span>
+          <span class="stat-name">배고픔</span>
+          <span class="stat-val" id="val-hunger">80</span>
+        </div>
+        <div class="track">
+          <div class="fill fill-hunger" id="fill-hunger" style="width:80%"></div>
+        </div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-header">
+          <span class="stat-icon">🌸</span>
+          <span class="stat-name">행복</span>
+          <span class="stat-val" id="val-happy">70</span>
+        </div>
+        <div class="track">
+          <div class="fill fill-happy" id="fill-happy" style="width:70%"></div>
+        </div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-header">
+          <span class="stat-icon">💧</span>
+          <span class="stat-name">청결</span>
+          <span class="stat-val" id="val-clean">90</span>
+        </div>
+        <div class="track">
+          <div class="fill fill-clean" id="fill-clean" style="width:90%"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Actions -->
+    <section class="actions-grid">
+      <button class="action-btn" data-action="feed">
+        <span class="a-icon">🍡</span>
+        <span class="a-label">밥 주기</span>
+      </button>
+      <button class="action-btn" data-action="play">
+        <span class="a-icon">🎮</span>
+        <span class="a-label">놀기</span>
+      </button>
+      <button class="action-btn" data-action="clean">
+        <span class="a-icon">🛁</span>
+        <span class="a-label">씻기기</span>
+      </button>
+      <button class="action-btn" data-action="sleep">
+        <span class="a-icon">💤</span>
+        <span class="a-label">재우기</span>
+      </button>
+      <button class="action-btn" data-action="pat">
+        <span class="a-icon">🫶</span>
+        <span class="a-label">쓰다듬기</span>
+      </button>
+      <button class="action-btn" data-action="sing">
+        <span class="a-icon">🎵</span>
+        <span class="a-label">노래</span>
+      </button>
+    </section>
+
+    <!-- Log -->
+    <section class="log-panel" id="log-panel">
+      <div class="log-entry first">사만코가 태어났어요! 잘 돌봐주세요 🐟</div>
+    </section>
+
+  </main>
+
+  <script src="js/fish.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/actions.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
